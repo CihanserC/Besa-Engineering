@@ -1,0 +1,299 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 2rem; /* 4rem yerine 2rem yaparak yanlardan boşluğu azaltalım */
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+    box-sizing: border-box; /* padding'in width'e eklenmemesi için */
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.navbar-brand h1 {
+    margin: 0;
+    color: #2d3436;
+    background: linear-gradient(to right, #0984e3, #00b894);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.navbar-brand a {
+    text-decoration: none;
+    color: #2d3436;
+    background: linear-gradient(to right, #0984e3, #00b894);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand a:hover {
+    transform: scale(1.05);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 1.5rem; /* Boşluğu daha da azalttık */
+}
+
+.nav-links li {
+    position: relative;
+    white-space: nowrap; /* Link metinlerinin satır kesmesini engeller */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #2d3436;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 0.5rem 0;
+    transition: all 0.3s ease;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to right, #0984e3, #00b894);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #0984e3;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Aktif link için stil */
+.nav-links a.active {
+    color: #0984e3;
+}
+
+.nav-links a.active::after {
+    width: 100%;
+}
+
+/* Responsive tasarım için */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem 0.5rem; /* Yanlardaki boşluğu azalttık */
+    }
+
+    .nav-links {
+        gap: 0.8rem; /* Mobilde linkler arası boşluğu daha da azalttık */
+    }
+
+    .navbar-brand h1 {
+        font-size: 1.4rem; /* Mobilde başlık boyutunu küçülttük */
+    }
+
+    .nav-links a {
+        font-size: 0.85rem; /* Mobilde link yazı boyutunu küçülttük */
+    }
+}
+
+.progress-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #f1f1f1;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(to right, #0984e3, #00b894);
+    width: 0%;
+    transition: width 0.2s ease-out;
+}
+
+.dropdown {
+    position: relative;
+}
+
+/* Hover alanını genişletmek için */
+.dropdown::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: -20px;
+    right: -20px;
+    height: 20px;
+    background-color: transparent;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background-color: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 0; /* sharp corners */
+    padding: 0.8rem 0;
+    min-width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0s;
+}
+
+/* Üçgen ok ekleme */
+.dropdown-menu::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.04);
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+    transition-delay: 0.2s;
+}
+
+/* Dropdown menüyü kapatırken gecikme */
+.dropdown-menu:hover {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+
+.dropdown-menu li {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    list-style: none;
+    display: block;
+    width: 100%;
+}
+
+.dropdown-menu a {
+    padding: 0.8rem 1.5rem;
+    color: #4a5568;
+    font-size: 0.95rem;
+    display: block;
+    transition: all 0.2s ease;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 0; /* sharp item corners */
+    text-decoration: none;
+}
+
+
+.dropdown-menu a:hover {
+    color: #0984e3;
+    background: linear-gradient(90deg, rgba(9,132,227,0.08) 0%, rgba(0,184,148,0.08) 100%);
+    box-shadow: 0 2px 8px rgba(9,132,227,0.07);
+}
+
+/* Hover efekti için sol kenar çizgisi */
+.dropdown-menu a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background: linear-gradient(to bottom, #0984e3, #00b894);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    border-radius: 6px 0 0 6px;
+}
+
+.dropdown-menu a:hover::before {
+    opacity: 1;
+}
+
+/* Animasyon için stagger efekti */
+.dropdown-menu li:nth-child(1) a {
+    transition-delay: 0.05s;
+}
+
+.dropdown-menu li:nth-child(2) a {
+    transition-delay: 0.1s;
+}
+
+/* Products nested submenu styles */
+.products-menu {
+    min-width: 240px;
+}
+
+.products-menu .has-submenu {
+    position: relative;
+}
+
+/* small left-pointing triangle icon immediately left of the Havuz text */
+.products-menu .submenu-link {
+    position: relative;
+    padding-left: 2.2rem; /* space for the triangle */
+}
+
+.products-menu .submenu-link::before {
+    content: '';
+    position: absolute;
+    left: 8px; /* tighten space so triangle sits closer to text */
+    top: 50%;
+    /* translate to vertical center and rotate 180deg to flip the triangle */
+    transform: translateY(-50%) rotate(180deg);
+    width: 0;
+    height: 0;
+    /* bigger triangle */
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 12px solid #0984e3; /* theme color */
+    opacity: 0.98;
+}
+
+.products-menu .submenu {
+    /* open to the left and sit exactly adjacent to the parent dropdown (no overlap) */
+    position: absolute;
+    right: 100%;
+    left: auto;
+    top: 0;
+    margin-right: 0; /* no negative overlap, flush alignment */
+    background: white;
+    /* make submenu sharp-cornered to match design */
+    border-radius: 0;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    min-width: 200px;
+    padding: 0.4rem 0;
+    z-index: 120; /* higher so it sits above page content */
+    /* ensure the leftmost edge doesn't show a hairline gap on some browsers */
+    transform: translateX(0.5px);
+}
+
+.products-menu .submenu li a {
+    padding: 0.6rem 1rem;
+    color: #2d3436;
+    display: block;
+}

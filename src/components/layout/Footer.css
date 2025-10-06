@@ -1,0 +1,105 @@
+.footer {
+  background: linear-gradient(180deg, #0f1724 0%, #071126 100%);
+  color: #e6eef8;
+  padding-top: 2.5rem;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 320px; /* About | Contact | Map */
+  gap: 2rem;
+  align-items: start;
+}
+
+.footer-col h3 {
+  margin: 0 0 0.8rem 0;
+  font-size: 1.05rem;
+  color: #fff;
+}
+
+.footer-col p, .footer-col li, .footer-col a {
+  color: #d3e6f8;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.footer-col ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-col a {
+  text-decoration: none;
+  color: #cfe7ff;
+  transition: color 150ms ease, transform 150ms ease;
+}
+
+.footer-col a:hover,
+.footer-col a:focus {
+  color: #fff;
+  transform: translateX(4px);
+}
+
+.social { display:flex; gap:0.6rem; margin-top:0.6rem }
+.icon-link svg { opacity: 0.95; transition: transform 140ms ease, opacity 140ms ease }
+.icon-link:hover svg,
+.icon-link:focus svg { transform: translateY(-3px); opacity: 1 }
+
+.footer-logo { width: 120px; height: auto; margin-bottom: 0.6rem }
+
+/* clickable contact links styling */
+.footer-col a[href^="tel:"], .footer-col a[href^="mailto:"] {
+  color: #dbeffe;
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.04);
+  margin-top: 2rem;
+  padding: 1rem 0 2rem;
+  text-align: center;
+}
+
+/* WhatsApp floating action button */
+.whatsapp-fab {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: inline-grid;
+  place-items: center;
+  background: linear-gradient(180deg,#25D366,#1DA851);
+  box-shadow: 0 12px 36px rgba(37,211,102,0.18);
+  z-index: 1200;
+  text-decoration: none;
+}
+.whatsapp-fab svg { display: block; width: 72%; height: 72%; }
+.whatsapp-fab:focus { outline: 3px solid rgba(37,211,102,0.18); }
+.whatsapp-fab:hover { transform: translateY(-3px); box-shadow: 0 14px 36px rgba(37,211,102,0.22); }
+
+@media (max-width: 800px) {
+  .footer-grid { grid-template-columns: 1fr; gap: 1.25rem }
+  .footer { padding-top: 1.5rem }
+  .whatsapp-fab { right: 14px; bottom: 14px; width: 56px; height: 56px }
+  .whatsapp-fab svg { width: 72%; height: 72% }
+}
+
+/* Map wrapper */
+.map-wrap {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 4px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.footer-map iframe { display: block; width: 100%; height: 100%; border: 0 }

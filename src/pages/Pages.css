@@ -1,0 +1,128 @@
+/* Simple page styles used by Vision and Mission pages */
+/* General page content */
+.page-content { padding: 4rem 0; min-height: calc(100vh - 140px); }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 1rem; }
+
+/* Mission page specific styles */
+.page-mission { /* ensure page content starts below the fixed navbar */
+  padding-top: 6rem; /* extra offset so heading isn't hidden under navbar */
+  background: linear-gradient(180deg, #0b3d91 0%, #1e6fb8 100%); /* blue tones */
+  color: #fff; /* foreground text white for readability */
+}
+
+/* Vision page background and overlay */
+.page-vision {
+  padding-top: 6rem;
+  background-color: #083065; /* fallback */
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-vision::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('../components/Images/Vizyonumuz.png');
+  background-size: cover;
+  background-position: center right;
+  opacity: 0.45; /* make the background more visible */
+  filter: saturate(1.05) contrast(1);
+  z-index: 0;
+}
+
+.page-vision::after {
+  /* dark overlay for contrast */
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(2,46,86,0.6), rgba(12,74,132,0.6));
+  z-index: 0;
+}
+
+.page-vision .container { position: relative; z-index: 1; }
+
+.page-vision h1 { scroll-margin-top: 110px; }
+
+/* Improve vertical rhythm: add more breathing room under headings */
+h1 { margin-bottom: 1.2rem; }
+h2 { margin-top: 1.6rem; margin-bottom: 0.9rem; }
+p { margin-bottom: 1rem; }
+ul { margin-bottom: 1rem; }
+
+/* Vision list styles */
+.vision-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.9rem; }
+.vision-list li { display: flex; gap: 0.9rem; align-items: flex-start; color: #f3fbff; }
+.vision-icon { flex: 0 0 36px; width: 36px; height: 36px; padding: 6px; border-radius: 8px; background: rgba(255,255,255,0.06); color: #e8f6ff; box-shadow: 0 6px 18px rgba(0,0,0,0.14); }
+.vision-list li { font-size: 1rem; line-height: 1.6; }
+
+@media (max-width: 700px) {
+  .vision-icon { width: 30px; height: 30px; padding: 4px; }
+}
+
+.mission-grid { display: grid; grid-template-columns: 1fr 380px; gap: 2rem; align-items: start; }
+.mission-text h1 { font-size: 2.2rem; margin-bottom: 1rem; color: #fff; }
+.mission-text h1 { scroll-margin-top: 110px; }
+.mission-text h2 { font-size: 1.25rem; margin-top: 1.35rem; margin-bottom: 0.6rem; color: #f0f7ff; }
+.mission-text p, .mission-text li { color: #f7fbff; font-size: 1rem; line-height: 1.7; }
+.mission-text ul { margin-left: 1.2rem; }
+.mission-text li { margin-bottom: 0.5rem; }
+
+/* Values list styling */
+.values-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 1rem; }
+.values-list li { display: flex; gap: 0.9rem; align-items: flex-start; }
+.values-list .val-icon { flex: 0 0 36px; width: 36px; height: 36px; padding: 6px; border-radius: 8px; background: rgba(255,255,255,0.08); color: #dff0ff; box-shadow: 0 6px 18px rgba(0,0,0,0.15); }
+.values-list li strong { display: block; color: #fff; margin-bottom: 0.15rem; }
+.values-list li p { margin: 0; color: #eaf6ff; font-size: 0.98rem; }
+
+/* Slightly reduce the icon size on small screens */
+@media (max-width: 700px) {
+  .values-list .val-icon { width: 30px; height: 30px; padding: 4px; }
+}
+
+.mission-image img { width: 100%; height: auto; display: block; border-radius: 6px; box-shadow: 0 8px 30px rgba(0,0,0,0.25); }
+
+@media (max-width: 900px) {
+  .mission-grid { grid-template-columns: 1fr 300px; }
+}
+
+@media (max-width: 700px) {
+  .page-mission { padding-top: 5rem; }
+  .mission-grid { grid-template-columns: 1fr; }
+  .mission-image { order: 2; margin-top: 1.2rem; }
+}
+
+@media (max-width: 600px) {
+  .page-content { padding: 2rem 0 }
+  h1 { font-size: 1.6rem }
+}
+
+/* Contact page styles */
+.contact-grid { display: grid; grid-template-columns: 1fr 460px; gap: 2.5rem; align-items: start; }
+.contact-info h1 { margin-bottom: 0.6rem; }
+.contact-info p { color: #e8f6ff; margin-bottom: 0.6rem; }
+.contact-info h3 { margin-top: 1.1rem; margin-bottom: 0.45rem; color: #eaf6ff; }
+
+/* pool-blue themed contact page */
+.page-contact { background: linear-gradient(180deg,#0a4f8a 0%, #1b81b0 100%); color: #fff; padding-top: 6.2rem; }
+.page-contact h1 { scroll-margin-top: 120px; }
+.page-contact .container { position: relative; z-index: 1; }
+.contact-form-wrap { background: rgba(255,255,255,0.08); padding: 1.2rem; border-radius: 10px; box-shadow: 0 10px 30px rgba(2,18,40,0.25); border: 1px solid rgba(255,255,255,0.06); }
+.contact-form .row { margin-bottom: 0.9rem; }
+.contact-form label { display: block; font-weight: 600; margin-bottom: 0.4rem; color: #f3fbff; }
+.contact-form label .required { color: #ffd6d6; margin-left: 0.2rem; }
+.contact-form input, .contact-form textarea { box-sizing: border-box; max-width: 100%; width: 100%; padding: 0.6rem 0.75rem; border: 1px solid rgba(255,255,255,0.14); border-radius: 6px; font-size: 0.95rem; background: rgba(255,255,255,0.04); color: #fff; }
+.contact-form input::placeholder, .contact-form textarea::placeholder { color: rgba(255,255,255,0.65); }
+.contact-form .btn.primary { background: #fff; color: #06304b; padding: 0.6rem 1rem; border: none; border-radius: 6px; cursor: pointer; font-weight: 700; box-shadow: 0 6px 18px rgba(2,18,40,0.12); }
+.contact-form .btn.primary:hover { transform: translateY(-1px); box-shadow: 0 10px 22px rgba(2,18,40,0.16); }
+.contact-form .btn.primary:focus { outline: 3px solid rgba(255,255,255,0.14); }
+.sent-msg { margin-left: 0.8rem; color: #e6ffee; font-weight: 600; }
+
+@media (max-width: 900px) {
+  .contact-grid { grid-template-columns: 1fr 340px; }
+}
+
+@media (max-width: 700px) {
+  .contact-grid { grid-template-columns: 1fr; }
+  .contact-form-wrap { order: 2; }
+}
