@@ -1,8 +1,29 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import './Pages.css';
 import MisyonImg from '../components/Images/Misyonumuz.png';
 
 const Mission = () => {
+    // parallax effect for mission-bg
+    useEffect(() => {
+        const el = document.querySelector('.mission-bg');
+        if (!el) return;
+        let ticking = false;
+        function onScroll() {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    const rect = el.parentElement.getBoundingClientRect();
+                    const offset = Math.max(0, -rect.top);
+                    el.style.transform = `translateY(${offset * 0.35}px)`;
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+        return () => window.removeEventListener('scroll', onScroll);
+    }, []);
+
     return (
         <main className="page page-content page-mission">
             <section className="container mission-grid">
@@ -16,12 +37,33 @@ const Mission = () => {
                     </p>
 
                     <h2>Nasıl Çalışıyoruz?</h2>
-                    <ul>
-                        <li>Müşteri ihtiyaçlarını dinleyip, kişiye özel çözümler tasarlıyoruz</li>
-                        <li>Kaliteli tedarikçi ağımızla güvenilir ürünler temin ediyoruz</li>
-                        <li>Uzman montaj ve servis ekibimizle hızlı ve etkili uygulama yapıyoruz</li>
-                        <li>Satış sonrası destek ve düzenli bakım hizmetleri sunuyoruz</li>
-                    </ul>
+                    <div className="how-we-work">
+                        <div className="how-grid">
+                            <article className="how-card">
+                                <div className="how-icon">👂</div>
+                                <h3>Müşteriyi Dinleme</h3>
+                                <p>Müşteri ihtiyaçlarını dinleyip, kişiye özel çözümler tasarlıyoruz.</p>
+                            </article>
+
+                            <article className="how-card">
+                                <div className="how-icon">🔗</div>
+                                <h3>Güvenilir Tedarik</h3>
+                                <p>Kaliteli tedarikçi ağımızla güvenilir ürünler temin ediyoruz.</p>
+                            </article>
+
+                            <article className="how-card">
+                                <div className="how-icon">🛠️</div>
+                                <h3>Uzman Montaj</h3>
+                                <p>Uzman montaj ve servis ekibimizle hızlı ve etkili uygulama yapıyoruz.</p>
+                            </article>
+
+                            <article className="how-card">
+                                <div className="how-icon">📞</div>
+                                <h3>Satış Sonrası Destek</h3>
+                                <p>Satış sonrası destek ve düzenli bakım hizmetleri sunuyoruz.</p>
+                            </article>
+                        </div>
+                    </div>
 
                     <h2>Değerlerimiz</h2>
                     <div className="values">
@@ -79,12 +121,15 @@ const Mission = () => {
                     </div>
                 </div>
 
-                <div className="mission-image">
-                    <img src={MisyonImg} alt="Misyonumuz" />
+                <div className="mission-image" style={{ backgroundImage: `url(${MisyonImg})` }}>
+                    <div className="mission-bg" aria-hidden="true" />
+                    {/* keep an offscreen image for accessibility/SEO */}
+                    <img src={MisyonImg} alt="Misyonumuz" style={{ position: 'absolute', width: 1, height: 1, overflow: 'hidden', clip: 'rect(1px, 1px, 1px, 1px)' }} aria-hidden="true" />
                 </div>
             </section>
         </main>
     );
 };
+
 
 export default Mission;

@@ -12,29 +12,8 @@ const Footer = () => {
 
                 <div className="footer-col contact" aria-label="İletişim bilgileri">
                     <h3>İletişim</h3>
-                    <p>
-                        <strong>Adres:</strong>{' '}
-                        <a href="https://maps.app.goo.gl/ZCeao4ZAfkAGAzYU8" target="_blank" rel="noopener noreferrer">
-                            Besa Mühendislik Konumu
-                        </a>
-                    </p>
                     <p><strong>Telefon:</strong> <a href="tel:+905465541017">+90 546 554 10 17</a></p>
                     <p><strong>Email:</strong> <a href="mailto:bulentavci@besaengineer.com">bulentavci@besaengineer.com</a></p>
-                </div>
-
-                <div className="footer-col footer-map">
-                    <div className="map-wrap">
-                        <iframe
-                            title="Besa Mühendislik Konum"
-                            src="https://www.google.com/maps?q=https://maps.app.goo.gl/ZCeao4ZAfkAGAzYU8&output=embed"
-                            width="100%"
-                            height="180"
-                            style={{ border: 0 }}
-                            allowFullScreen=""
-                            loading="lazy"
-                        ></iframe>
-                    </div>
-                    {/* Note removed per user request */}
                 </div>
             </div>
 

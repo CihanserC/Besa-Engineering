@@ -1,0 +1,102 @@
+[
+  {
+    "id": "P001",
+    "image": "P001.png",
+    "name": "Havuz Filtre Seti",
+    "description": "Yüksek verimli kum filtresi seti, uzun ömürlü performans.",
+    "category": "Havuz",
+    "bestSeller": true,
+    "featured": false,
+    "discounted": false
+  },
+  {
+    "id": "P002",
+    "image": "P002.png",
+    "name": "Otomatik Sulama Kontrolü",
+    "description": "Zamanlayıcı ve sensörlü akıllı sulama kontrol ünitesi.",
+    "category": "Sulama",
+    "bestSeller": false,
+    "featured": true,
+    "discounted": false
+  },
+  {
+    "id": "P003",
+    "image": "P003.png",
+    "name": "Peyzaj Aydınlatma Paketi",
+    "description": "LED tabanlı dış mekan aydınlatma seti, enerji tasarruflu.",
+    "category": "Peyzaj",
+    "bestSeller": false,
+    "featured": true,
+    "discounted": true
+  },
+  {
+    "id": "P004",
+    "image": "P004.png",
+    "name": "Havuz Pompası Pro",
+    "description": "Sessiz çalışma, yüksek debi havuz pompası.",
+    "category": "Havuz",
+    "bestSeller": false,
+    "featured": true,
+    "discounted": true
+  },
+  {
+    "id": "P005",
+    "image": "P005.png",
+    "name": "Filtre Kimyasalı 5L",
+    "description": "pH dengesi sağlayan etkili havuz kimyasalı.",
+    "category": "Kimyasallar",
+    "bestSeller": false,
+    "featured": true,
+    "discounted": true
+  },
+  {
+    "id": "P006",
+    "image": "P006.png",
+    "name": "Bahçe Boru Seti",
+    "description": "Dayanıklı PE boru seti, kolay montaj.",
+    "category": "Sulama",
+    "bestSeller": false,
+    "featured": true,
+    "discounted": true
+  },
+  {
+    "id": "P007",
+    "image": "P007.png",
+    "name": "Havuz Merdiveni Paslanmaz",
+    "description": "Paslanmaz çelik, sağlam havuz merdiveni.",
+    "category": "Havuz",
+    "bestSeller": false,
+    "featured": true,
+    "discounted": true
+  },
+  {
+    "id": "P008",
+    "image": "P008.png",
+    "name": "Otomatik Klor Dağıtıcı",
+    "description": "Kullanımı kolay, ölçümlü klor dağıtım cihazı.",
+    "category": "Kimyasallar",
+    "bestSeller": false,
+    "featured": true,
+    "discounted": true
+  },
+  {
+    "id": "P009",
+    "image": "P009.png",
+    "name": "Dalgıç Pompa Mini",
+    "description": "Küçük form faktörlü dalgıç pompa, enerji verimli.",
+    "category": "Ekipman",
+    "bestSeller": true,
+    "featured": true,
+    "discounted": true
+  },
+  {
+    "id": "P010",
+    "image": "P010.png",
+    "name": "Havuz Termostatı",
+    "description": "Havuz suyu sıcaklık kontrol cihazı.",
+    "category": "Ekipman",
+    "bestSeller": true,
+    "featured": false,
+    "discounted": true
+  }
+]

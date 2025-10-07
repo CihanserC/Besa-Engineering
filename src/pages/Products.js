@@ -1,26 +1,73 @@
 import React from 'react';
-import Card from '../components/shared/Card';
+import { Link } from 'react-router-dom';
+import './Pages.css';
+
 const Products = () => {
-  const products = [
+  const categories = [
     {
-      id: 1,
-      name: "Pool Equipment",
-      description: "High quality pool equipment",
-      category: "pool",
-      price: "Contact for price"
+      id: 'havuz',
+      title: 'Havuz',
+      subtitle: 'POOL',
+      description: 'Havuz Bakım ve Donanım',
+      image: '/src/components/Images/P001.png',
+      color: 'from-blue-400 to-blue-600',
+      link: '/products/pool'
     },
-    // Diğer ürünler...
+    {
+      id: 'sulama',
+      title: 'Sulama Sistemleri',
+      subtitle: 'IRRIGATION', 
+      description: 'Modern Sulama Çözümleri',
+      image: '/src/components/Images/P002.png',
+      color: 'from-blue-500 to-blue-700',
+      link: '/products/irrigation'
+    },
+    {
+      id: 'peyzaj',
+      title: 'Peyzaj Ürünleri',
+      subtitle: 'LANDSCAPE',
+      description: 'Bahçe ve Peyzaj Malzemeleri', 
+      image: '/src/components/Images/P003.png',
+      color: 'from-blue-600 to-blue-800',
+      link: '/products/landscape'
+    }
   ];
 
   return (
-    <section className="products-section">
-      <h2>Our Products</h2>
-      <div className="products-grid">
-        {products.map(product => (
-          <Card key={product.id} {...product} />
-        ))}
+    <main className="page page-content page-products">
+      <div className="container">
+        <h1 className="page-title">Ürünlerimiz</h1>
+        
+        <div className="products-intro">
+          <p className="intro-text">
+            Siz Değerli Müşterilerimiz için daima en iyisini ve kalitesini üretmeye devam 
+            ediyoruz. Daha fazla bilgi için bizimle iletişe geçebilirsiniz.
+          </p>
+        </div>
+
+        <div className="product-cardboards">
+          {categories.map(category => (
+            <Link 
+              key={category.id} 
+              to={category.link} 
+              className="product-cardboard"
+            >
+              <div className="cardboard-inner">
+                <div className="cardboard-image-container">
+                  <div className="cardboard-image">
+                    {/* Solid blue background - no image */}
+                  </div>
+                </div>
+                
+                <div className="cardboard-center">
+                  <h2 className="cardboard-main-title">{category.title}</h2>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
       </div>
-    </section>
+    </main>
   );
 };
 

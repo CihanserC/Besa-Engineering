@@ -14,7 +14,7 @@ const Vision = () => {
                     enerji verimli ve kullanıcı dostu çözümler sunmayı hedefliyoruz.
                 </p>
 
-                <h2>Odak Noktalarımız</h2>
+                <h2 className="heading-odak">Odak Noktalarımız</h2>
                 <ul className="vision-list">
                     <li>
                         <svg className="vision-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
@@ -51,7 +51,7 @@ const Vision = () => {
                     </li>
                 </ul>
 
-                <h2>Geleceğe Bakış</h2>
+                <h2 className="heading-gelecek">Geleceğe Bakış</h2>
                 <p>
                     Ar-Ge ve iş ortaklıklarımızla sektördeki yenilikleri yakından takip ederek;
                     dijitalleşme, uzaktan izleme ve enerji verimliliği çözümlerini ürün
