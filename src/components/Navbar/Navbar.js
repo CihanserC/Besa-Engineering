@@ -8,8 +8,10 @@ const Navbar = () => {
     const hideTimeoutRef = useRef(null);
     const [isProductsOpen, setIsProductsOpen] = useState(false);
     const [isPoolSubOpen, setIsPoolSubOpen] = useState(false);
+    const [isIrrigationSubOpen, setIsIrrigationSubOpen] = useState(false);
     const hideProductsTimeoutRef = useRef(null);
     const hidePoolTimeoutRef = useRef(null);
+    const hideIrrigationTimeoutRef = useRef(null);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -64,6 +66,7 @@ const Navbar = () => {
                         </ul>
                     )}
                 </li>
+                <li><Link to="/jager" className="jager-link">Jager</Link></li>
                 <li className="dropdown products-dropdown"
                     onMouseEnter={() => {
                         if (hideProductsTimeoutRef.current) {
@@ -76,6 +79,7 @@ const Navbar = () => {
                         hideProductsTimeoutRef.current = setTimeout(() => {
                             setIsProductsOpen(false);
                             setIsPoolSubOpen(false);
+                            setIsIrrigationSubOpen(false);
                         }, 180);
                     }}>
                     <Link to="/products">Ürünlerimiz</Link>
@@ -92,6 +96,7 @@ const Navbar = () => {
                                 hideProductsTimeoutRef.current = setTimeout(() => {
                                     setIsProductsOpen(false);
                                     setIsPoolSubOpen(false);
+                                    setIsIrrigationSubOpen(false);
                                 }, 180);
                             }}>
                             <li className="has-submenu"
@@ -115,11 +120,31 @@ const Navbar = () => {
                                     </ul>
                                 )}
                             </li>
-                            <li><Link to="/products/irrigation">Sulama Sistemleri</Link></li>
-                            <li><Link to="/products/landscape">Peyzaj Ürünleri</Link></li>
+                            <li className="has-submenu"
+                                onMouseEnter={() => {
+                                    if (hideIrrigationTimeoutRef.current) {
+                                        clearTimeout(hideIrrigationTimeoutRef.current);
+                                        hideIrrigationTimeoutRef.current = null;
+                                    }
+                                    setIsIrrigationSubOpen(true);
+                                }}
+                                onMouseLeave={() => {
+                                    hideIrrigationTimeoutRef.current = setTimeout(() => {
+                                        setIsIrrigationSubOpen(false);
+                                    }, 160);
+                                }}>
+                                <Link to="#" className="submenu-link">Sulama Sistemleri</Link>
+                                {isIrrigationSubOpen && (
+                                    <ul className="submenu">
+                                        <li><Link to="/products/irrigation/hunter">Hunter</Link></li>
+                                        <li><Link to="/products/irrigation/poelsan">Poelsan</Link></li>
+                                    </ul>
+                                )}
+                            </li>
                         </ul>
                     )}
                 </li>
+                <li><Link to="/projects">Projelerimiz</Link></li>
                 <li><Link to="/contact">İletişim</Link></li>
             </ul>
             <div className="progress-container">

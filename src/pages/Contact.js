@@ -86,7 +86,7 @@ const Contact = () => {
                 <h1 className="page-title">İletişim</h1>
             </div>
             
-            <section className="container contact-grid">
+            <section className="container contact-section">
                 <div className="contact-info">
                     <h3>İletişim Bilgileri</h3>
                     <p>Her türlü soru, teklif veya iş birliği talepleriniz için aşağıdaki bilgilerden bize ulaşabilirsiniz.</p>

@@ -14,7 +14,8 @@
 }
 
 .navbar-brand {
-    font-size: 1.8rem;
+    font-family: 'La Macchina', sans-serif;
+    font-size: 2.2rem;
     font-weight: 700;
     letter-spacing: -0.5px;
 }
@@ -24,8 +25,10 @@
     color: #2d3436;
     background: linear-gradient(to right, #0984e3, #00b894);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 1.8rem;
+    font-family: 'La Macchina', sans-serif;
+    font-size: 2.2rem;
     font-weight: 700;
     letter-spacing: -0.5px;
 }
@@ -35,7 +38,9 @@
     color: #2d3436;
     background: linear-gradient(to right, #0984e3, #00b894);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-family: 'La Macchina', sans-serif;
     transition: transform 0.3s ease;
 }
 
@@ -296,4 +301,30 @@
     padding: 0.6rem 1rem;
     color: #2d3436;
     display: block;
+}
+
+/* Jager Link Styling with La Macchina Font */
+@font-face {
+    font-family: 'La Macchina';
+    src: url('../fonts/La Macchina.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.jager-link {
+    font-family: 'La Macchina', sans-serif !important;
+    font-size: 1.1rem !important;
+    font-weight: bold !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    transition: all 0.3s ease !important;
+}
+
+.jager-link:hover {
+    transform: scale(1.05);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }

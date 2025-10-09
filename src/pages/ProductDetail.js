@@ -1,16 +1,21 @@
 import React, { useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import products from '../data/products.json';
 import './Pages.css';
 
 const ProductDetail = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
   const product = products.find(p => p.id === id);
 
   // Scroll to top when component mounts or product changes
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [id]);
+
+  const handleGoBack = () => {
+    navigate(-1); // Bir önceki sayfaya dön
+  };
 
   if (!product) return (
     <div className="container page-content">
@@ -20,44 +25,56 @@ const ProductDetail = () => {
     </div>
   );
 
-  // attempt to resolve an image from src/components/Images using the product id
-  let imgSrc = `${process.env.PUBLIC_URL}/${product.image}`;
+  // attempt to resolve an image from src/components/Images/ProductImages using the product image name
+  let imgSrc = null;
+  
   try {
-    // try png first
-    imgSrc = require(`../components/Images/${product.id}.png`);
-  } catch (e1) {
-    try {
-      imgSrc = require(`../components/Images/${product.id}.jpg`);
-    } catch (e2) {
-      // fallback to the image name stored in JSON (public folder)
-      imgSrc = `${process.env.PUBLIC_URL}/${product.image}`;
-    }
+    // Use the image name from the product data (e.g., "1.png", "2.png")
+    imgSrc = require(`../components/Images/ProductImages/${product.image}`);
+  } catch (e) {
+    console.log('Image not found:', product.image);
+    // fallback to a placeholder or hide image
+    imgSrc = null;
   }
 
   return (
     <section className="container page-content product-detail" aria-labelledby="product-title">
       {/* Back button positioned in top-left corner */}
       <div className="product-detail-back-btn">
-        <Link to="/" className="btn btn-back">
+        <button onClick={handleGoBack} className="btn btn-back">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{marginRight: '8px'}}>
             <path d="M19 12H5"/>
             <path d="m12 19-7-7 7-7"/>
           </svg>
           Geri
-        </Link>
+        </button>
       </div>
 
       <div className="product-detail-card">
         <div className="product-detail-media">
-          <img src={imgSrc} alt={product.name} className="product-detail-img" />
+          {imgSrc ? (
+            <img src={imgSrc} alt={product.name} className="product-detail-img" />
+          ) : (
+            <div className="product-detail-no-image">
+              <span>Görsel Yok</span>
+            </div>
+          )}
         </div>
 
         <div className="product-detail-content">
           <h1 id="product-title" className="product-detail-title">{product.name}</h1>
-          <p className="muted product-meta">Ürün kodu: {product.id} • Kategori: {product.category}</p>
 
           <div className="product-detail-desc">
-            {product.description && <p>{product.description}</p>}
+            {product.description && (
+              <div>
+                {product.description.split('\n').filter(line => line.trim() !== '').map((line, index) => (
+                  <div key={index} className="description-line">
+                    <span className="bullet">•</span>
+                    <span className="text">{line.trim()}</span>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </div>

@@ -1,10 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Pages.css';
+import AboutUs3 from '../components/Images/AboutUs3.png';
+import AboutUs4 from '../components/Images/AboutUs4.jpg';
 
 const About = () => {
     return (
-        <main className="page page-content page-about">
+        <main 
+            className="page page-content page-about"
+            style={{
+                backgroundImage: `url(${AboutUs4})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat',
+                backgroundAttachment: 'fixed'
+            }}
+        >
             <div className="container">
                 <h1 className="page-title">Hakkımızda</h1>
                 
@@ -43,6 +54,15 @@ const About = () => {
                         </div>
                         <h3>Misyonumuz</h3>
                     </Link>
+                </div>
+
+                {/* About Us Image Section */}
+                <div className="about-image-section">
+                    <img 
+                        src={AboutUs3} 
+                        alt="Besa Mühendislik Hakkımızda" 
+                        className="about-horizontal-image"
+                    />
                 </div>
             </div>
         </main>

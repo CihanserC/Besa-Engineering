@@ -1,102 +1,370 @@
 [
   {
-    "id": "P001",
-    "image": "P001.png",
-    "name": "Havuz Filtre Seti",
-    "description": "Yüksek verimli kum filtresi seti, uzun ömürlü performans.",
-    "category": "Havuz",
-    "bestSeller": true,
+    "id": "1",
+    "image": "1.png",
+    "name": "Mavi Seri",
+    "description": "Darbelere karşı dayanıklı, yüksek kaliteli polipropilen hammaddeden üretilmiştir.\nİç yüzeyleri homojen ve gözeneksizdir.\nO-ringi kauçuktan üretilmekte olup yüksek basınç altında sızdırmazlık sağlar.\nDişi ürünlerimiz, korozyona dayanıklı metal yüzük sayesinde değişken sıcaklıklarda yüksek sızdırmazlık sağlar.\nUV ışınlarını geçirmediği için yosunlanmaya ve bakteri üremesine izin vermez.\nSuyun kokusunu ve tadını değiştirebilecek zararlı bileşikler içermez\nBorulardaki ölçü farklılıklarından veya ovallikten oluşabilecek sorunları konik sıkma özelliği sayesinde önler.\nISO 17885 Standardına uygundur.\nDiş ölçüleri ISO 7-1 Standardına uygundur.",
+    "category": "Sulama-Poelsan",
+    "bestSeller": false,
     "featured": false,
     "discounted": false
   },
   {
-    "id": "P002",
-    "image": "P002.png",
-    "name": "Otomatik Sulama Kontrolü",
-    "description": "Zamanlayıcı ve sensörlü akıllı sulama kontrol ünitesi.",
-    "category": "Sulama",
+    "id": "2",
+    "image": "2.png",
+    "name": "Yeşil Seri",
+    "description": "Darbelere karşı dayanıklı, yüksek kaliteli polipropilen hammaddeden üretilmiştir.\nİç yüzeyleri homojen ve gözeneksizdir.\nO-ringi kauçuktan üretilmekte olup yüksek basınç altında sızdırmazlık sağlar.\nDişi ürünlerimiz, korozyona dayanıklı metal yüzük sayesinde değişken sıcaklıklarda yüksek sızdırmazlık sağlar.\nUV ışınlarını geçirmediği için yosunlanmaya ve bakteri üremesine izin vermez.\nSuyun kokusunu ve tadını değiştirebilecek zararlı bileşikler içermez\nBorulardaki ölçü farklılıklarından veya ovallikten oluşabilecek sorunları konik sıkma özelliği sayesinde önler.\nISO 17885 Standardına uygundur.\nDiş ölçüleri ISO 7-1 Standardına uygundur.",
+    "category": "Sulama-Poelsan",
     "bestSeller": false,
-    "featured": true,
+    "featured": false,
     "discounted": false
   },
   {
-    "id": "P003",
-    "image": "P003.png",
-    "name": "Peyzaj Aydınlatma Paketi",
-    "description": "LED tabanlı dış mekan aydınlatma seti, enerji tasarruflu.",
-    "category": "Peyzaj",
+    "id": "3",
+    "image": "3.png",
+    "name": "Priz Kolye",
+    "description": "\nDarbelere karşı dayanıklı, yüksek kaliteli polipropilen hammaddeden üretilmiştir.\nO-ringi kauçuktan üretilmekte olup yüksek basınç altında sızdırmazlık sağlar.\nÜrünlerimizde kullanılan korozyona dayanıklı metal yüzük sayesinde 50 ⁰C’yi aşmayan sistemlerde güvenle kullanılabilir.\nSuyun kokusunu ve tadını değiştirebilecek zararlı bileşikler içermez\nİçme suyunda kullanıma uygundur.\nBorulardaki ölçü farklılıklarından doğabilecek sızıntıları önleyebilecek şekilde tasarlanmıştır.\nMetal yüzük, cıvata, somun ve pullar paslanmaz çelik ve galvaniz olarak çeşitlendirilmiştir.\nSomunlar, alt kapaktaki yuvalarına yerleştirildiği için hızlı ve kolay montaj yapılmasını sağlar.\nISO 13460-1 Standardına uygundur.\nDiş ölçüleri ISO 7-1 Standardına uygundur",
+    "category": "Sulama-Poelsan",
     "bestSeller": false,
-    "featured": true,
-    "discounted": true
-  },
-  {
-    "id": "P004",
-    "image": "P004.png",
-    "name": "Havuz Pompası Pro",
-    "description": "Sessiz çalışma, yüksek debi havuz pompası.",
-    "category": "Havuz",
-    "bestSeller": false,
-    "featured": true,
-    "discounted": true
-  },
-  {
-    "id": "P005",
-    "image": "P005.png",
-    "name": "Filtre Kimyasalı 5L",
-    "description": "pH dengesi sağlayan etkili havuz kimyasalı.",
-    "category": "Kimyasallar",
-    "bestSeller": false,
-    "featured": true,
-    "discounted": true
-  },
-  {
-    "id": "P006",
-    "image": "P006.png",
-    "name": "Bahçe Boru Seti",
-    "description": "Dayanıklı PE boru seti, kolay montaj.",
-    "category": "Sulama",
-    "bestSeller": false,
-    "featured": true,
-    "discounted": true
-  },
-  {
-    "id": "P007",
-    "image": "P007.png",
-    "name": "Havuz Merdiveni Paslanmaz",
-    "description": "Paslanmaz çelik, sağlam havuz merdiveni.",
-    "category": "Havuz",
-    "bestSeller": false,
-    "featured": true,
-    "discounted": true
-  },
-  {
-    "id": "P008",
-    "image": "P008.png",
-    "name": "Otomatik Klor Dağıtıcı",
-    "description": "Kullanımı kolay, ölçümlü klor dağıtım cihazı.",
-    "category": "Kimyasallar",
-    "bestSeller": false,
-    "featured": true,
-    "discounted": true
-  },
-  {
-    "id": "P009",
-    "image": "P009.png",
-    "name": "Dalgıç Pompa Mini",
-    "description": "Küçük form faktörlü dalgıç pompa, enerji verimli.",
-    "category": "Ekipman",
-    "bestSeller": true,
-    "featured": true,
-    "discounted": true
-  },
-  {
-    "id": "P010",
-    "image": "P010.png",
-    "name": "Havuz Termostatı",
-    "description": "Havuz suyu sıcaklık kontrol cihazı.",
-    "category": "Ekipman",
-    "bestSeller": true,
     "featured": false,
-    "discounted": true
+    "discounted": false
+  },
+  {
+    "id": "4",
+    "image": "4.png",
+    "name": "Priz Kolye Geçmeli",
+    "description": "Darbelere karşı dayanıklı, yüksek kaliteli polipropilen hammaddeden üretilmiştir.\nO-ringi kauçuktan üretilmekte olup yüksek basınç altında sızdırmazlık sağlar.\nSuyun kokusunu ve tadını değiştirebilecek zararlı bileşikler içermez.\nBorulardaki ölçü farklılıklarından doğabilecek sızıntıları önleyebilecek şekilde tasarlanmıştır.\nISO 13460-1 Standardına uygundur.",
+    "category": "Sulama-Poelsan",
+    "bestSeller": false,
+    "featured": false,
+    "discounted": false
+  },
+  {
+    "id": "5",
+    "image": "5.png",
+    "name": "Layflat Ek Parçaları",
+    "description": "Darbelere karşı dayanıklı, yüksek kaliteli polipropilen hammaddeden üretilmiştir.\nİç yüzeyleri homojen ve gözeneksizdir.\nO-ringi kauçuktan üretilmekte olup yüksek basınç altında sızdırmazlık sağlar.\nSuyun kokusunu ve tadını değiştirebilecek zararlı bileşikler içermez.",
+    "category": "Sulama-Poelsan",
+    "bestSeller": false,
+    "featured": false,
+    "discounted": false
+  },
+  {
+    "id": "6",
+    "image": "6.png",
+    "name": "Dişli Bağlantı Elemanları",
+    "description": "Darbelere karşı dayanıklı, yüksek kaliteli polipropilen hammaddeden üretilmiştir.\nİç yüzeyleri homojen ve gözeneksizdir.\nUV ışınlarını geçirmediği için yosunlanmaya ve bakteri üremesine izin vermez.\nSuyun kokusunu ve tadını değiştirebilecek zararlı bileşikler içermez.",
+    "category": "Sulama-Poelsan",
+    "bestSeller": false,
+    "featured": false,
+    "discounted": false
+  },
+  {
+    "id": "7",
+    "image": "7.png",
+    "name": "EF Manşon",
+    "description": "Daha hızlı, daha sağlam ve daha kalıcı bağlantılar\n\nUzun Ömürlü Kullanım : Dayanıklı ve sızdırmaz yapısı sayesinde sistemin ömrünü uzatır.\nSağlıklı İçme Suyu : Zararlı kimyasal madde içermediği için suyun doğal tadını ve kokusunu korur.\nİdeal Kaynak Süresi : Hızlı ve güvenilir bağlantılar kurmayı sağlar.\nYüksek Kaliteli Malzeme : EN 12201-3, EN 1555-3 standartlarına uygun üretilir.\nKullanım Alanları\nPolietilen Su ve Doğalgaz Sistemleri\n\nPE 100 SDR 11\nGaranti Verilen Basınç Değeri\nØ 20 mm – Ø 160 mm (Water)   :PN 16\nØ 20 mm – Ø 160 mm (Gas)       :PN 10",
+    "category": "Sulama-Poelsan",
+    "bestSeller": false,
+    "featured": false,
+    "discounted": false
+  },
+  {
+    "id": "8",
+    "image": "8.png",
+    "name": "Spigot Ek Parçaları",
+    "description": "Daha hızlı, daha sağlam ve daha kalıcı bağlantılar.\n\nUzun Ömürlü Kullanım :\nDayanıklı ve sızdırmaz yapısı sayesinde sistemin ömrünü uzatır.\nSağlıklı İçme Suyu : Zararlı kimyasal madde içermediǧi için suyun doǧal tadını ve kokusunu korur.\nİdeal Kaynak Süresi : Hızlı ve güvenilir baǧlantılar kurmayı saǧlar.\nYüksek Kaliteli Malzeme : EN 12201-3, EN 1555-3 standartlarına uygun üretilir.",
+    "category": "Sulama-Poelsan",
+    "bestSeller": false,
+    "featured": false,
+    "discounted": false
+  },
+  {
+    "id": "9",
+    "image": "9.png",
+    "name": "Pilli Kontrol Ünitesi",
+    "description": "Poelsan CUP/BT\nİstasyon\n1,2,4,6\n\nGüç Kaynağı\n9V Alkalin Pil\n\nSensör girişleri\n2 (Rüzgar, Yağmur, Don)\n\nSu Geçirmezlik\nIP68\nGaranti Süresi\n2 Yıl",
+    "category": "Sulama-Poelsan",
+    "bestSeller": false,
+    "featured": false,
+    "discounted": false
+  },
+  {
+    "id": "10",
+    "image": "10.png",
+    "name": "1\" Solenoid Vana",
+    "description": "Otomatik Sulama Sistemleri kontrolleri için güvenilir performans.\n\nGaranti Edilen Basınç Değeri\nMax. 10 Bar\n\nÇalışma Aralığı\n1,0 - 10,0 Bar ; 100-1000 kPa\n\nMax. Çalışma Sıcaklığı\n66°C\n\n2 Yıl Garanti",
+    "category": "Sulama-Poelsan",
+    "bestSeller": false,
+    "featured": false,
+    "discounted": false
+  },
+  {
+    "id": "11",
+    "image": "11.png",
+    "name": "1 1/2\" - 2\" Solenoid Vana",
+    "description": "Otomatik Sulama Sistemleri kontrolleri için güvenilir performans.\n\nGaranti Edilen Basınç Değeri\nMax. 10 Bar\n\nÇalışma Aralığı\n1,0 - 10,0 Bar ; 100-1000 kPa\n\nMax. Çalışma Sıcaklığı\n66°C\n\n2 Yıl Garanti",
+    "category": "Sulama-Poelsan",
+    "bestSeller": false,
+    "featured": false,
+    "discounted": false
+  },
+  {
+    "id": "12",
+    "image": "12.png",
+    "name": "Y Seri",
+    "description": "Ergonomik tasarımı sayesinde kolay kurulum sağlayan hazır nozul montajlı seçeneği ile fonksiyonel  spreylerdir.\n\nYoğun kir direncine sahip filtre\nErgonomik tasarım sayesinde nozul montaj – demontaj kolaylığı\nSomunlarda 45°ayarlanmış federler ile kolay açı ayarlama\nSistem temizliği için fonksiyonel yıkama kapağı\nSistem kapanırken sprey kendini temizleme özelliği\nDişi nozulların tümüyle uyumludur\nSistemdeki ani basınç artışlarına karşı dayanıklı gövde\nKurulum ve bakım için etkinlik seviyesi yüksek dinamik nozul tasarımı",
+    "category": "Sulama-Poelsan",
+    "bestSeller": false,
+    "featured": false,
+    "discounted": false
+  },
+  {
+    "id": "13",
+    "image": "13.png",
+    "name": "YS Seri Çekvalf",
+    "description": "",
+    "category": "Sulama-Poelsan",
+    "bestSeller": false,
+    "featured": false,
+    "discounted": false
+  },
+  {
+    "id": "14",
+    "image": "14.png",
+    "name": "Y Seri Çekvalf",
+    "description": "",
+    "category": "Sulama-Poelsan",
+    "bestSeller": false,
+    "featured": false,
+    "discounted": false
+  },
+  {
+    "id": "15",
+    "image": "15.png",
+    "name": "Sprey Yıkama Kapağı",
+    "description": "",
+    "category": "Sulama-Poelsan",
+    "bestSeller": false,
+    "featured": false,
+    "discounted": false
+  },
+  {
+    "id": "16",
+    "image": "16.png",
+    "name": "Sprey Büyük Filtre",
+    "description": "",
+    "category": "Sulama-Poelsan",
+    "bestSeller": false,
+    "featured": false,
+    "discounted": false
+  },
+  {
+    "id": "17",
+    "image": "17.png",
+    "name": "Ayarlanabilir Nozullar",
+    "description": "Özel tasarım mekanizması sayesinde peyzaj alanına en uygun olan farklı açı ayarları ile tıkanma, takılma olmadan çalışma sürekliliğini koruyabilen dayanıklı uzun ömürlü nozullardır. Dayanıklılığı ile zorlu iklim şartlarında dahi çalışma sürekliliğini koruyabilen uzun ömürlü nozullar, özel mekanizması sayesinde sorunsuz çalışmaktadır. Yüksek kalite malzeme kullanımı ve hassas üretim teknolojisi sayesinde en ağır şartlara dayanıklı istikrarlı çalışan performans spreyleridir.\n\nKaliteli ve şık tasarımı ile kolay montaj\n0° ile 360° arasında ayarlama kolaylığı\nKenar tırnak tasarımı ile konforlu tutuş\nEşit dağılımı ile güvenilir sulama\nAtış mesafelerini temsil eden renk kodları",
+    "category": "Sulama-Poelsan",
+    "bestSeller": false,
+    "featured": false,
+    "discounted": false
+  },
+  {
+    "id": "18",
+    "image": "18.png",
+    "name": "Şerit Tipi Nozullar",
+    "description": "Sabit açılı nozullar, sulama sistemlerinde hassas ve etkili sulama sağlamak için tasarlanmış önemli bir unsurdur. Bu nozullar, suyun belirli bir açıda ve sabit bir basınçla püskürtülmesini sağlayarak sulama işlemini optimize eder. Genellikle dar çim ve bitki alanlarında kullanılan bu nozullar, suyun düzgün bir şekilde dağılmasını ve alanın tamamının homojen bir şekilde sulanmasını sağlar. Ayrıca, sabit açılı nozulların kullanımıyla su israfı önlenir ve sulama verimliliği artar. Dayanıklı yapıları sayesinde uzun süreli kullanım için idealdirler ve değişik hava koşullarına uyum sağlayacak şekilde tasarlanmışlardır.\n\nŞerit alanlarını doğru şekilde kapsama amacıyla özel olarak geliştirilmiştir.\nFarklı dikdörtgen alanlara uyacak şekilde çeşitli modeller sunulmaktadır.\nZorlu koşullara dayanıklı yapıya sahiptir.",
+    "category": "Sulama-Poelsan",
+    "bestSeller": false,
+    "featured": false,
+    "discounted": false
+  },
+  {
+    "id": "19",
+    "image": "19.png",
+    "name": "YS Seri",
+    "description": "Yüksek kalite malzeme kullanımı ve inovasyona dayalı üretim teknolojisi ile zorlu iklim şartlarına dayanıklı istikrarlı çalışan performans spreyleridir.\n\nYoğun kir direncine sahip filtre\nErgonomik tasarım sayesinde nozul montaj – demontaj kolaylığı\nSomunlarda 45°ayarlanmış federler ile kolay açı ayarlama\nSistem temizliği için fonksiyonel yıkama kapağı\nGüçlü gövde yapısı ile uzun ömürlü\nSistem kapanırken sprey kendini temizleme özelliği\nDişi nozulların tümüyle uyumludur\nEstetik yapısı peyzaj alanlarına uyum sağlar\nSistemdeki ani basınç artışlarına karşı dayanıklı gövde\nKurulum ve bakım için etkinlik seviyesi yüksek dinamik nozul tasarımı",
+    "category": "Sulama-Poelsan",
+    "bestSeller": false,
+    "featured": false,
+    "discounted": false
+  },
+  {
+    "id": "20",
+    "image": "20.png",
+    "name": "Küresel Vanalar",
+    "description": "\nDarbelere karşı dayanıklı, yüksek kaliteli polipropilen hammaddeden üretilmiştir.\nO-ring kauçuktan üretilmekte olup yüksek basınç altında sızdırmazlık sağlar.\nSuyun kokusunu ve tadını değiştirebilecek zararlı bileşikler içermez.\nVananın her iki yönünden de akış sağlamak mümkündür.\nAkışkan geçişinde basınç ve debi kaybına sebep olmaz.\nSisteminizde kolay montaj imkânı sağlar.",
+    "category": "Sulama-Poelsan",
+    "bestSeller": false,
+    "featured": false,
+    "discounted": false
+  },
+  {
+    "id": "21",
+    "image": "21.png",
+    "name": "Can Suyu Vana",
+    "description": "\nÇeyrek tur kolay açma ve kapama kolaylığı\nVana içerisine pislik girmesini önleyen kilitli kapak.\nUV dirençli, darbelere karşı dayanıklı hammadde\nAsetal yay iç kovan\nPaslanmaz çelik yay\nDiş ölçüleri ISO 7-1 standardına uygundur.",
+    "category": "Sulama-Poelsan",
+    "bestSeller": false,
+    "featured": false,
+    "discounted": false
+  },
+  {
+    "id": "22",
+    "image": "22.png",
+    "name": "Vana Kutuları",
+    "description": "Yüksek kaliteli polipropilen hammaddeden üretilmiştir.\nKapak içerisinde özel tasarım plastik kilit sistemi mevcuttur.\nBoru geçişleri için boru çaplarına göre özel kesimli delikler bulunmaktadır.\nToprak altına döşenmiş sistem ekipmanlarına kolay ulaşım sağlar.",
+    "category": "Sulama-Poelsan",
+    "bestSeller": false,
+    "featured": false,
+    "discounted": false
+  },
+  {
+    "id": "23",
+    "image": "23.png",
+    "name": "Plastik Filtreler",
+    "description": "Yüksek kaliteli polipropilen malzemeden üretilmiştir\nMinimum basınç kaybı sağlar\nGeniş debi aralığında çalışma kabiliyeti sunar\nKolay temizlenebilir ve esnek bakım odaklı tasarlanmıştır\nHassas partikül tutma özelliğine sahiptir\n120 Mesh elek ve disk kartuş seçeneği bulunur\nElek paslanmaz çelik, disk poliproplen (PP) hammaddeden oluşmaktadır\nKorozyon ve kimyasallara karşı yüksek hassasiyet sağlar",
+    "category": "Sulama-Poelsan",
+    "bestSeller": false,
+    "featured": false,
+    "discounted": false
+  },
+  {
+    "id": "24",
+    "image": "24.png",
+    "name": "Mini Vanalar",
+    "description": "\nSu geçiş çapı 8 mm.\nDarbelere karşı dayanıklı yüksek kaliteli polipropilen hammaddeden üretilmiştir.\nSulama sisteminizi kolayca açıp kapayarak kontrol etmenizi sağlar.\nUV ışınlarını geçirmediği için yosunlanmaya ve bakteri üremesine izin vermez.\nSuyun kokusunu ve tadını değiştirebilecek zararlı bileşikler içermez.\nO-ringi kauçuktan üretilmekte olup yüksek basınç altında sızdırmazlık sağlar.\nİç yüzeyleri homojen ve gözeneksizdir.\nSu geçiş çapı 8 mm.\nDarbelere karşı dayanıklı yüksek kaliteli polipropilen hammaddeden üretilmiştir.\nSulama sisteminizi kolayca açıp kapayarak kontrol etmenizi sağlar.\nUV ışınlarını geçirmediği için yosunlanmaya ve bakteri üremesine izin vermez.\nSuyun kokusunu ve tadını değiştirebilecek zararlı bileşikler içermez.\nO-ringi kauçuktan üretilmekte olup yüksek basınç altında sızdırmazlık sağlar.\nİç yüzeyleri homojen ve gözeneksizdir.",
+    "category": "Sulama-Poelsan",
+    "bestSeller": false,
+    "featured": false,
+    "discounted": false
+  },
+  {
+    "id": "25",
+    "image": "25.png",
+    "name": "Hat Sonu Tahliye Vanası",
+    "description": "Saha koşullarında kolay ve pratik montaj ve demontaj,\nUzun ömürlü diyafram dizaynı,\nDeğişen debi koşullarına karşı güvenli kullanım,\nOtomatik hat içi temizleme ve kolay bakım,\nÇevre hassasiyetinin ve darbelere karşı dayanımın ön planda olduğu malzeme kullanımı.\nMax. Çalışma Basıncı : 4.0 Bar\nMin. Çalışma Basıncı : 1.0 Bar\nMin. Debi : 4.6 m³/dk",
+    "category": "Sulama-Poelsan",
+    "bestSeller": false,
+    "featured": false,
+    "discounted": false
+  },
+  {
+    "id": "26",
+    "image": "26.png",
+    "name": "Kilitli Bağlantı Elemanları",
+    "description": "\nDarbelere karşı dayanıklı, yüksek kaliteli polipropilen hammaddeden üretilmiştir.\nİç yüzeyleri homojen ve gözeneksizdir.\nSuyun kokusunu ve tadını değiştirebilecek zararlı bileşikler içermez.\nUV ışınlarını geçirmediği için yosunlanmaya ve bakteri üremesine izin vermez.",
+    "category": "Sulama-Poelsan",
+    "bestSeller": false,
+    "featured": false,
+    "discounted": false
+  },
+  {
+    "id": "27",
+    "image": "27.png",
+    "name": "Damla Sulama Kurtağzı",
+    "description": "Darbelere karşı dayanıklı, yüksek kaliteli polipropilen hammaddeden üretilmiştir.\nİç yüzeyleri homojen ve gözeneksizdir.\nUV ışınlarını geçirmediği için yosunlanmaya ve bakteri üremesine izin vermez.\nSuyun kokusunu ve tadını değiştirebilecek zararlı bileşikler içermez.\nØ16 mm ve Ø20 mm Alçak Yoğunluklu Polietilen (AYPE) Borularda (Düz Damla Sulama Borusu) kullanılır.\nØ16 mm ve Ø20 mm Yuvarlak Damla Sulama Borularında kullanılır.",
+    "category": "Sulama-Poelsan",
+    "bestSeller": false,
+    "featured": false,
+    "discounted": false
+  },
+  {
+    "id": "28",
+    "image": "28.png",
+    "name": "Damla Sulama Somunlu",
+    "description": "Darbelere karşı dayanıklı, yüksek kaliteli polipropilen hammaddeden üretilmiştir.\nİç yüzeyleri homojen ve gözeneksizdir.\nUV ışınlarını geçirmediği için yosunlanmaya ve bakteri üremesine izin vermez.\nSuyun kokusunu ve tadını değiştirebilecek zararlı bileşikler içermez.\nØ16 mm ve Ø20 mm Yuvarlak Damla Sulama Borularında kullanılır.\nISO 9261 Standardına uygundur.",
+    "category": "Sulama-Poelsan",
+    "bestSeller": false,
+    "featured": false,
+    "discounted": false
+  },
+  {
+    "id": "29",
+    "image": "29.png",
+    "name": "Yassı Damla Sulama Somunlu",
+    "description": "Darbelere karşı dayanıklı, yüksek kaliteli polipropilen hammaddeden üretilmiştir.\nİç yüzeyleri homojen ve gözeneksizdir.\nUV ışınlarını geçirmediği için yosunlanmaya ve bakteri üremesine izin vermez.\nSuyun kokusunu ve tadını değiştirebilecek zararlı bileşikler içermez.\nØ17 mm ve Ø22 mm Yassı Damla Sulama Borularında kullanılır.",
+    "category": "Sulama-Poelsan",
+    "bestSeller": false,
+    "featured": false,
+    "discounted": false
+  },
+  {
+    "id": "30",
+    "image": "30.png",
+    "name": "Yassı Damla Sulama Yüzüklü",
+    "description": "\nDarbelere karşı dayanıklı, yüksek kaliteli polipropilen hammaddeden üretilmiştir.\nİç yüzeyleri homojen ve gözeneksizdir.\nUV ışınlarını geçirmediği için yosunlanmaya ve bakteri üremesine izin vermez.\nSuyun kokusunu ve tadını değiştirebilecek zararlı bileşikler içermez.\nØ17 mm dikişsiz Yassı Damla Sulama Borularında kullanılır.\nISO 9261 Standardına uygundur.",
+    "category": "Sulama-Poelsan",
+    "bestSeller": false,
+    "featured": false,
+    "discounted": false
+  },
+  {
+    "id": "31",
+    "image": "31.png",
+    "name": "Minisprinkler ve Ek Parçaları",
+    "description": "\nMinisprinklerin rotorları toz, böcek vb. girmesini önleyecek şekilde tasarlanmıştır.\nBitkinin büyümesi için gerekli suyun doğrudan bitki köklerine ulaşmasını sağlar.\nMikrofittinkler ile Ø7 mm Spagetti Borularda ve Ø16 mm, Ø20 mm, Ø25 mm ve Ø32 mm Alçak Yoğunluklu Polietilen (AYPE) Borularda (Düz Damla Sulama Borusu) kullanılır.\nAlan sulamalarında kullanılabilecek, maksimum verim sağlayan en ideal üründür.\nSoğuk hava şartlarına karşı etkin koruma sağlar.",
+    "category": "Sulama-Poelsan",
+    "bestSeller": false,
+    "featured": false,
+    "discounted": false
+  },
+  {
+    "id": "32",
+    "image": "32.png",
+    "name": "Hat Üstü Damlatıcılar",
+    "description": "Damlatıcının kapağı kolay sökülüp takılabilir şekilde olması damlatıcının temizlenmesi işlemini kolaylaştırır.\nKullanım alanlarında montaj kolaylığı sağlar.\nØ16 mm, Ø20 mm, Ø25 mm ve Ø32 mm Alçak Yoğunluklu Polietilen (AYPE) Borularda (Düz Damla Sulama Boruları) kullanılır.\nMikrofittinkler ile Ø7 mm Spagetti borularda kullanılır.",
+    "category": "Sulama-Poelsan",
+    "bestSeller": false,
+    "featured": false,
+    "discounted": false
+  },
+  {
+    "id": "33",
+    "image": "33.png",
+    "name": "Rural Seri",
+    "description": "Darbelere karşı dayanıklı, yüksek kaliteli polipropilen hammaddeden üretilmiştir.\nİç yüzeyleri homojen ve gözeneksizdir.\nO-ringi kauçuktan üretilmekte olup yüksek basınç altında sızdırmazlık sağlar.\nUV ışınlarını geçirmediği için yosunlanmaya ve bakteri üremesine izin vermez.\nSuyun kokusunu ve tadını değiştirebilecek zararlı bileşikler içermez.",
+    "category": "Sulama-Poelsan",
+    "bestSeller": false,
+    "featured": false,
+    "discounted": false
+  },
+  {
+    "id": "34",
+    "image": "34.png",
+    "name": "Rural Küresel Vana",
+    "description": "\nDarbelere karşı dayanıklı, yüksek kaliteli polipropilen hammaddeden üretilmiştir.\nİç yüzeyleri homojen ve gözeneksizdir.\nO-ringi kauçuktan üretilmekte olup yüksek basınç altında sızdırmazlık sağlar.\nUV ışınlarını geçirmediği için yosunlanmaya ve bakteri üremesine izin vermez.\nSuyun kokusunu ve tadını değiştirebilecek zararlı bileşikler içermez.",
+    "category": "Sulama-Poelsan",
+    "bestSeller": false,
+    "featured": false,
+    "discounted": false
+  },
+  {
+    "id": "35",
+    "image": "35.jpg",
+    "name": "P HVZ-ph TOZ ph DÜŞÜRÜCÜ",
+    "description": "Havuz suyunun pH değerini düşürmek için kullanılan toz asittir. Havuz suyunun ideal pH değeri olan 7,2-7,6 değerlerini koruyacak şekilde ayarlanmalıdır. Diğer kimyasallarla karıştırılmamalı ve amacının dışında kullanılmamalıdır. %5 ila oranlarında suyla seyreltilerek kullanılmaldır.\n\n   AMBALAJ:\n\n   P10 HVZ-ph TOZ ph DÜŞÜRÜCÜ 20 KG",
+    "category": "Kimyasal"
+  },
+  {
+    "id": "36",
+    "image": "36.jpg",
+    "name": "P HVZ- FL TOPAKLAYICI ÇÖKTÜRÜCÜ",
+    "description": "Havuz suyunda çöktürücü olarak kullanılan yardımcı havuz kimyasalıdır. Havuz sularına bulanıklık, matlık veren flokları kompleks ve topaklama yaparak çökmesini sağlar. Uygulama sonucunda havuz suyuna berrakklık ve canlılık görüntüsü verir. 100m⊃3; suya 30 - 200mL/gün olacak şekilde suyla seyreltilerek uygulama havuzun kullanılmadığı zamanlarda filtrasyon öncesinde yapılmalıdır.\n\n   AMBALAJ:\n\n   P13 HVZ- FL TOPAKLAYICI ÇÖKTÜRÜCÜ 10 L\n\n   P14 HVZ- FL TOPAKLAYICI ÇÖKTÜRÜCÜ 20 L",
+    "category": "Kimyasal"
+  },
+  {
+    "id": "37",
+    "image": "37.jpg",
+    "name": "P HVZ-İYON TUTUCU",
+    "description": "Havuz suyunda demir giderimi için kullanılmaktadır. Özel formülü sayesinde havuz suyunda istenmeyen iyonların tutulmasında görevalır. 100m⊃3; havuz suyuna 4 - 20L arasında ürün kullanılarak uygulama yapılır\n\n   AMBALAJ:\n\n   HVZ-İR-10 İYON TUTUCU 10L\n\n   HVZ-İR-20 İYON TUTUCU 20L",
+    "category": "Kimyasal"
+  },
+  {
+    "id": "38",
+    "image": "38.jpg",
+    "name": "P HVZ-HAVUZ SUYU PARLATICISI",
+    "description": "",
+    "category": "Kimyasal"
   }
 ]
