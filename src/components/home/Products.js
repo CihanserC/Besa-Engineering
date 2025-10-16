@@ -6,6 +6,8 @@ import productsData from '../../data/products.json';
 const Carousel = ({ items, title, alignment = 'center' }) => {
   const trackRef = useRef(null);
   const [scrollX, setScrollX] = useState(0);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
   const visibleCount = 5; // show up to 5 cards in the viewport
 
   // compute step dynamically based on card width + gap
@@ -33,6 +35,17 @@ const Carousel = ({ items, title, alignment = 'center' }) => {
     if (!gap || gap <= 0) gap = 16;
     return Math.round((cardW + gap) * visibleCount);
   }
+
+  // Check scroll position to enable/disable buttons
+  const updateScrollButtons = () => {
+    if (!trackRef.current) return;
+    const track = trackRef.current;
+    const scrollLeft = track.scrollLeft;
+    const maxScroll = track.scrollWidth - track.clientWidth;
+    
+    setCanScrollLeft(scrollLeft > 5); // Small threshold for floating point precision
+    setCanScrollRight(scrollLeft < maxScroll - 5);
+  };
 
   // pointer drag-to-scroll
   const [isDragging, setIsDragging] = useState(false);
@@ -78,12 +91,21 @@ const Carousel = ({ items, title, alignment = 'center' }) => {
       }
     };
 
-  el.addEventListener('pointerdown', onPointerDown);
+    const onScroll = () => {
+      updateScrollButtons();
+    };
+
+    el.addEventListener('pointerdown', onPointerDown);
+    el.addEventListener('scroll', onScroll);
     window.addEventListener('pointermove', onPointerMove);
     window.addEventListener('pointerup', onPointerUp);
 
+    // Initial check
+    updateScrollButtons();
+
     return () => {
       el.removeEventListener('pointerdown', onPointerDown);
+      el.removeEventListener('scroll', onScroll);
       window.removeEventListener('pointermove', onPointerMove);
       window.removeEventListener('pointerup', onPointerUp);
     };
@@ -92,15 +114,22 @@ const Carousel = ({ items, title, alignment = 'center' }) => {
   function scrollBy(amount) {
     if (!trackRef.current) return;
     trackRef.current.scrollBy({ left: amount, behavior: 'smooth' });
+    // Update buttons after scroll completes
+    setTimeout(updateScrollButtons, 300);
   }
 
   return (
     <div className="product-row">
       <h3 className="row-title">{title}</h3>
       <div className="row-controls">
-  <button aria-label="left" className="row-btn left" style={{ display: items.length > visibleCount ? 'block' : 'none' }} onClick={() => scrollBy(-computeStep())}>
+        <button 
+          aria-label="Sola kaydır" 
+          className="row-btn left" 
+          disabled={!canScrollLeft || items.length <= visibleCount} 
+          onClick={() => scrollBy(-computeStep())}
+        >
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M15 18l-6-6 6-6" stroke="#064a6f" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M15 18l-6-6 6-6" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </button>
         <div ref={trackRef} className={`product-track ${alignment === 'left' ? 'track-left-aligned' : ''}`}>
@@ -154,9 +183,14 @@ const Carousel = ({ items, title, alignment = 'center' }) => {
             );
           })}
         </div>
-        <button aria-label="right" className="row-btn right" style={{ display: items.length > visibleCount ? 'block' : 'none' }} onClick={() => scrollBy(computeStep())}>
+        <button 
+          aria-label="Sağa kaydır" 
+          className="row-btn right" 
+          disabled={!canScrollRight || items.length <= visibleCount} 
+          onClick={() => scrollBy(computeStep())}
+        >
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M9 6l6 6-6 6" stroke="#064a6f" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M9 6l6 6-6 6" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </button>
       </div>
