@@ -14,6 +14,7 @@ import ProductDetail from './pages/ProductDetail';
 import PoolEquipment from './pages/PoolEquipment';
 import PoolChemicals from './pages/PoolChemicals';
 import Hunter from './pages/Hunter';
+import HunterProductDetail from './pages/HunterProductDetail';
 import Poelsan from './pages/Poelsan';
 
 // Component to handle scroll restoration
@@ -36,7 +37,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/about" element={<About />} />
-                    <Route path="/jager" element={<Jager />} />
+                    <Route path="/jalex" element={<Jager />} />
                     <Route path="/products" element={<Products />} />
                     <Route path="/products/pool/equipment" element={<PoolEquipment />} />
                     <Route path="/products/pool/chemicals" element={<PoolChemicals />} />
@@ -47,6 +48,7 @@ function App() {
                     <Route path="/projects" element={<Projects />} />
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/product/:id" element={<ProductDetail />} />
+                    <Route path="/product/hunter/:id" element={<HunterProductDetail />} />
                 </Routes>
                 <Footer />
             </div>

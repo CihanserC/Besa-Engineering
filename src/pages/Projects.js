@@ -9,9 +9,19 @@ const Projects = () => {
             </div>
             
             <section className="container">
-                <div className="empty-page-message">
-                    <h2>Yapım Aşamasında</h2>
-                    <p>Bu sayfa şu anda yapım aşamasındadır ve yakında hizmete açılacaktır.</p>
+                <div className="under-construction">
+                    <div className="construction-icon">
+                        <div className="cone">🚧</div>
+                        <div className="cone">🚧</div>
+                        <div className="cone">🚧</div>
+                    </div>
+                    <h2 className="construction-title">Yapım Aşamasında</h2>
+                    <p className="construction-message">
+                        Bu sayfa şu anda yapım aşamasındadır ve yakında hizmete açılacaktır.
+                    </p>
+                    <div className="construction-loader">
+                        <div className="loader-bar"></div>
+                    </div>
                 </div>
             </section>
         </main>

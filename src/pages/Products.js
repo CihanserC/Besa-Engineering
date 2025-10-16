@@ -2,68 +2,99 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Pages.css';
 
+// Icon imports
+import HavuzUrunleriIcon from '../components/Images/HavuzUrunleriIcon.png';
+import HavuzEkipmanlariIcon from '../components/Images/HavuzEkipmanlariIcon.png';
+import HavuzKimyasallariIcon from '../components/Images/HavuzKimyasallariIcon.png';
+import SulamaSistemleriIcon from '../components/Images/SulamaSistemleriIcon.png';
+import HunterSulamaIcon from '../components/Images/HunterSulamaIcon.png';
+import PoelsanSulamaIcon from '../components/Images/PoelsanSulamaIcon.png';
+
 const Products = () => {
-  const categories = [
+  const productCategories = [
     {
       id: 'havuz',
-      title: 'Havuz',
-      subtitle: 'POOL',
-      description: 'Havuz Bakım ve Donanım',
-      image: '/src/components/Images/P001.png',
-      color: 'from-blue-400 to-blue-600',
-      link: '/products/pool'
+      title: 'Havuz Ürünleri',
+      icon: HavuzUrunleriIcon,
+      description: 'Profesyonel havuz bakım ve donanım ürünleri',
+      subcategories: [
+        {
+          name: 'Havuz Ekipmanları',
+          path: '/products/pool/equipment',
+          description: 'Filtreler, pompalar, merdivenler ve daha fazlası',
+          icon: HavuzEkipmanlariIcon
+        },
+        {
+          name: 'Havuz Kimyasalları',
+          path: '/products/pool/chemicals',
+          description: 'pH dengeleyiciler, klor ve bakım kimyasalları',
+          icon: HavuzKimyasallariIcon
+        }
+      ]
     },
     {
       id: 'sulama',
       title: 'Sulama Sistemleri',
-      subtitle: 'IRRIGATION', 
-      description: 'Modern Sulama Çözümleri',
-      image: '/src/components/Images/P002.png',
-      color: 'from-blue-500 to-blue-700',
-      link: '/products/irrigation'
-    },
-    {
-      id: 'peyzaj',
-      title: 'Peyzaj Ürünleri',
-      subtitle: 'LANDSCAPE',
-      description: 'Bahçe ve Peyzaj Malzemeleri', 
-      image: '/src/components/Images/P003.png',
-      color: 'from-blue-600 to-blue-800',
-      link: '/products/landscape'
+      icon: SulamaSistemleriIcon,
+      description: 'Modern ve verimli sulama çözümleri',
+      subcategories: [
+        {
+          name: 'Hunter Sulama',
+          path: '/products/irrigation/hunter',
+          description: 'Otomatik sulama sistemleri ve sprinkler çözümleri',
+          icon: HunterSulamaIcon
+        },
+        {
+          name: 'Poelsan Sulama',
+          path: '/products/irrigation/poelsan',
+          description: 'Damlama sulama ve ek parçaları',
+          icon: PoelsanSulamaIcon
+        }
+      ]
     }
   ];
 
   return (
-    <main className="page page-content page-products">
+    <main className="page page-content page-products-overview">
       <div className="container">
-        <h1 className="page-title">Ürünlerimiz</h1>
-        
-        <div className="products-intro">
-          <p className="intro-text">
-            Siz Değerli Müşterilerimiz için daima en iyisini ve kalitesini üretmeye devam 
-            ediyoruz. Daha fazla bilgi için bizimle iletişe geçebilirsiniz.
+        <div className="products-overview-header">
+          <h1 className="page-title">Ürün Kategorilerimiz</h1>
+          <p className="overview-subtitle">
+            Siz değerli müşterilerimiz için daima en iyisini ve kalitesini üretmeye devam 
+            ediyoruz. Kategorileri inceleyerek ürünlerimize göz atabilirsiniz.
           </p>
         </div>
 
-        <div className="product-cardboards">
-          {categories.map(category => (
-            <Link 
-              key={category.id} 
-              to={category.link} 
-              className="product-cardboard"
-            >
-              <div className="cardboard-inner">
-                <div className="cardboard-image-container">
-                  <div className="cardboard-image">
-                    {/* Solid blue background - no image */}
-                  </div>
+        <div className="categories-grid">
+          {productCategories.map(category => (
+            <div key={category.id} className="category-section">
+              <div className="category-header">
+                <div className="category-icon">
+                  <img src={category.icon} alt={category.title} />
                 </div>
-                
-                <div className="cardboard-center">
-                  <h2 className="cardboard-main-title">{category.title}</h2>
+                <div className="category-header-text">
+                  <h2 className="category-title">{category.title}</h2>
+                  <p className="category-description">{category.description}</p>
                 </div>
               </div>
-            </Link>
+
+              <div className="subcategories-grid">
+                {category.subcategories.map((sub, index) => (
+                  <Link 
+                    key={index} 
+                    to={sub.path} 
+                    className="subcategory-card"
+                  >
+                    <div className="subcategory-icon">
+                      <img src={sub.icon} alt={sub.name} />
+                    </div>
+                    <h3 className="subcategory-name">{sub.name}</h3>
+                    <p className="subcategory-description">{sub.description}</p>
+                    <div className="subcategory-arrow">→</div>
+                  </Link>
+                ))}
+              </div>
+            </div>
           ))}
         </div>
       </div>

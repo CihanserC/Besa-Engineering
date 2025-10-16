@@ -66,7 +66,7 @@ const Navbar = () => {
                         </ul>
                     )}
                 </li>
-                <li><Link to="/jager" className="jager-link">Jager</Link></li>
+                <li><Link to="/jalex" className="jager-link">Jalex</Link></li>
                 <li className="dropdown products-dropdown"
                     onMouseEnter={() => {
                         if (hideProductsTimeoutRef.current) {

@@ -16,7 +16,7 @@ const Jager = () => {
       
       <div className="container" style={{position: 'relative', zIndex: 2}}>
         <div className="jager-hero">
-          <h1 className="jager-title">JAGER</h1>
+          <h1 className="jager-title">JALEX</h1>
           <h2 className="jager-subtitle">DETERJAN GRUBU HİZMETLERİMİZ</h2>
           <div className="jager-content">
             <p className="jager-description">

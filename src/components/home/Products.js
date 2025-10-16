@@ -105,17 +105,37 @@ const Carousel = ({ items, title, alignment = 'center' }) => {
         </button>
         <div ref={trackRef} className={`product-track ${alignment === 'left' ? 'track-left-aligned' : ''}`}>
           {items.map(p => {
-            // Resolve image from src/components/Images using product id first, then fallback to JSON image (public)
-            let imgSrc = `${process.env.PUBLIC_URL}/${p.image}`;
-            try {
-              imgSrc = require(`../Images/${p.id}.png`);
-            } catch (e1) {
-              try { imgSrc = require(`../Images/${p.id}.webp`); } catch (e2) {
-                try { imgSrc = require(`../Images/${p.id}.jpg`); } catch (e3) {
-                  // fallback to public image from JSON
-                  imgSrc = `${process.env.PUBLIC_URL}/${p.image}`;
+            // Görsel import fonksiyonu - ProductDetail'deki ile aynı
+            const getImagePath = (imageName) => {
+              if (!imageName) return null;
+              
+              // Önce dosya uzantısını kontrol et
+              if (imageName && imageName.includes('.')) {
+                try {
+                  return require(`../Images/ProductImages/${imageName}`);
+                } catch (err) {
+                  console.log('Image not found with extension:', imageName);
+                  return null;
                 }
               }
+              
+              // Uzantı yoksa önce .png sonra .jpg dene
+              try {
+                return require(`../Images/ProductImages/${imageName}.png`);
+              } catch (err) {
+                try {
+                  return require(`../Images/ProductImages/${imageName}.jpg`);
+                } catch (err2) {
+                  console.log('Image not found for:', imageName);
+                  return null;
+                }
+              }
+            };
+
+            let imgSrc = getImagePath(p.image);
+            // Fallback olarak public klasöründeki resmi kullan
+            if (!imgSrc) {
+              imgSrc = `${process.env.PUBLIC_URL}/${p.image}`;
             }
 
             return (
