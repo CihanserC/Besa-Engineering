@@ -6,8 +6,7 @@ Contact formunun cihansercaliskan@outlook.com adresine email göndermesi için E
 
 ### 1. EmailJS Hesabı Oluştur
 - https://www.emailjs.com/ adresine git
-- Ücretsiz hesap oluştur: vJoVB@xX3^dh
-
+- Ücretsiz hesap oluştur:
 ### 2. Email Service Ekle
 - Dashboard'da "Email Services" bölümüne git
 - "Add Service" butonuna tıkla
