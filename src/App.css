@@ -157,3 +157,13 @@ p, h1, h2, h3, h4, h5, h6 {
     word-wrap: break-word;
     overflow-wrap: break-word;
 }
+
+/* CRITICAL: Prevent any horizontal scroll on mobile */
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow-x: clip; /* modern browsers: completely prevents horizontal scroll */
+    overscroll-behavior-x: none; /* disable horizontal overscroll bounce */
+    position: relative; /* establish containing block for fixed elements */
+}

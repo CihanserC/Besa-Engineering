@@ -54,15 +54,16 @@ const Navbar = () => {
         return () => document.removeEventListener('mousedown', handleClickOutside);
     }, [isMobileMenuOpen]);
 
-    // Prevent body scroll when mobile menu is open
+    // Prevent body vertical scroll when mobile menu is open
+    // Keep horizontal overflow-x hidden from CSS to avoid right-side white gap
     useEffect(() => {
         if (isMobileMenuOpen) {
-            document.body.style.overflow = 'hidden';
+            document.body.style.overflowY = 'hidden';
         } else {
-            document.body.style.overflow = 'unset';
+            document.body.style.overflowY = '';
         }
         return () => {
-            document.body.style.overflow = 'unset';
+            document.body.style.overflowY = '';
         };
     }, [isMobileMenuOpen]);
 
