@@ -115,7 +115,9 @@
 
 @media (max-width: 768px) {
     .hero {
-        height: 80vh;
+        /* Fill full viewport height on mobile to prevent next section peeking */
+        height: 100vh;
+        height: 100svh; /* modern small viewport unit for mobile browsers */
         padding: 0 1.5rem;
     }
 
@@ -139,7 +141,9 @@
 
 @media (max-width: 480px) {
     .hero {
-        height: 70vh;
+        /* Fill full viewport height on small phones as well */
+        height: 100vh;
+        height: 100svh;
         padding: 0 1rem;
     }
 

@@ -1,6 +1,5 @@
 # EmailJS Kurulum Rehberi
 
-Contact formunun cihansercaliskan@outlook.com adresine email göndermesi için EmailJS konfigürasyonu gerekiyor.
 
 ## Adımlar:
 
@@ -10,7 +9,7 @@ Contact formunun cihansercaliskan@outlook.com adresine email göndermesi için E
 ### 2. Email Service Ekle
 - Dashboard'da "Email Services" bölümüne git
 - "Add Service" butonuna tıkla
-- Outlook/Hotmail seç (cihansercaliskan@outlook.com için)
+- Outlook/Hotmail seç
 - Service ID'yi `service_besa_contact` olarak ayarla
 
 ### 3. Email Template Oluştur

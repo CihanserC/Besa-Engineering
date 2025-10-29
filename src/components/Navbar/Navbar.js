@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -31,6 +31,16 @@ const Navbar = () => {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
+
+    // Ensure mobile menu is closed on initial mount and on any route change
+    const location = useLocation();
+    useEffect(() => {
+        setIsMobileMenuOpen(false);
+        setIsMobileAboutOpen(false);
+        setIsMobileProductsOpen(false);
+        setIsMobilePoolOpen(false);
+        setIsMobileIrrigationOpen(false);
+    }, [location.pathname]);
 
     // Close mobile menu when clicking outside
     useEffect(() => {
@@ -105,24 +115,22 @@ const Navbar = () => {
                         }, 180);
                     }}>
                     <Link to="/about">Hakkımızda</Link>
-                    {isDropdownOpen && (
-                        <ul className="dropdown-menu"
-                            onMouseEnter={() => {
-                                if (hideTimeoutRef.current) {
-                                    clearTimeout(hideTimeoutRef.current);
-                                    hideTimeoutRef.current = null;
-                                }
-                                setIsDropdownOpen(true);
-                            }}
-                            onMouseLeave={() => {
-                                hideTimeoutRef.current = setTimeout(() => {
-                                    setIsDropdownOpen(false);
-                                }, 180);
-                            }}>
-                            <li><Link to="/about/vision">Vizyonumuz</Link></li>
-                            <li><Link to="/about/mission">Misyonumuz</Link></li>
-                        </ul>
-                    )}
+                    <ul className={`dropdown-menu ${isDropdownOpen ? 'show' : ''}`}
+                        onMouseEnter={() => {
+                            if (hideTimeoutRef.current) {
+                                clearTimeout(hideTimeoutRef.current);
+                                hideTimeoutRef.current = null;
+                            }
+                            setIsDropdownOpen(true);
+                        }}
+                        onMouseLeave={() => {
+                            hideTimeoutRef.current = setTimeout(() => {
+                                setIsDropdownOpen(false);
+                            }, 180);
+                        }}>
+                        <li><Link to="/about/vision">Vizyonumuz</Link></li>
+                        <li><Link to="/about/mission">Misyonumuz</Link></li>
+                    </ul>
                 </li>
                 <li><Link to="/jalex" className="jager-link">Jalex</Link></li>
                 <li className="dropdown products-dropdown"
@@ -141,22 +149,21 @@ const Navbar = () => {
                         }, 180);
                     }}>
                     <Link to="/products">Ürünlerimiz</Link>
-                    {isProductsOpen && (
-                        <ul className="dropdown-menu products-menu"
-                            onMouseEnter={() => {
-                                if (hideProductsTimeoutRef.current) {
-                                    clearTimeout(hideProductsTimeoutRef.current);
-                                    hideProductsTimeoutRef.current = null;
-                                }
-                                setIsProductsOpen(true);
-                            }}
-                            onMouseLeave={() => {
-                                hideProductsTimeoutRef.current = setTimeout(() => {
-                                    setIsProductsOpen(false);
-                                    setIsPoolSubOpen(false);
-                                    setIsIrrigationSubOpen(false);
-                                }, 180);
-                            }}>
+                    <ul className={`dropdown-menu products-menu ${isProductsOpen ? 'show' : ''}`}
+                        onMouseEnter={() => {
+                            if (hideProductsTimeoutRef.current) {
+                                clearTimeout(hideProductsTimeoutRef.current);
+                                hideProductsTimeoutRef.current = null;
+                            }
+                            setIsProductsOpen(true);
+                        }}
+                        onMouseLeave={() => {
+                            hideProductsTimeoutRef.current = setTimeout(() => {
+                                setIsProductsOpen(false);
+                                setIsPoolSubOpen(false);
+                                setIsIrrigationSubOpen(false);
+                            }, 180);
+                        }}>
                             <li className="has-submenu"
                                 onMouseEnter={() => {
                                     if (hidePoolTimeoutRef.current) {
@@ -171,12 +178,10 @@ const Navbar = () => {
                                     }, 160);
                                 }}>
                                 <Link to="#" className="submenu-link">Havuz</Link>
-                                {isPoolSubOpen && (
-                                    <ul className="submenu">
-                                        <li><Link to="/products/pool/chemicals">Kimyasallar</Link></li>
-                                        <li><Link to="/products/pool/equipment">Ekipmanlar</Link></li>
-                                    </ul>
-                                )}
+                                <ul className={`submenu ${isPoolSubOpen ? 'show' : ''}`}>
+                                    <li><Link to="/products/pool/chemicals">Kimyasallar</Link></li>
+                                    <li><Link to="/products/pool/equipment">Ekipmanlar</Link></li>
+                                </ul>
                             </li>
                             <li className="has-submenu"
                                 onMouseEnter={() => {
@@ -192,15 +197,12 @@ const Navbar = () => {
                                     }, 160);
                                 }}>
                                 <Link to="#" className="submenu-link">Sulama Sistemleri</Link>
-                                {isIrrigationSubOpen && (
-                                    <ul className="submenu">
-                                        <li><Link to="/products/irrigation/hunter">Hunter</Link></li>
-                                        <li><Link to="/products/irrigation/poelsan">Poelsan</Link></li>
-                                    </ul>
-                                )}
+                                <ul className={`submenu ${isIrrigationSubOpen ? 'show' : ''}`}>
+                                    <li><Link to="/products/irrigation/hunter">Hunter</Link></li>
+                                    <li><Link to="/products/irrigation/poelsan">Poelsan</Link></li>
+                                </ul>
                             </li>
                         </ul>
-                    )}
                 </li>
                 <li><Link to="/projects">Projelerimiz</Link></li>
                 <li><Link to="/contact">İletişim</Link></li>
@@ -219,18 +221,14 @@ const Navbar = () => {
                         <Link to="/" onClick={closeMobileMenu}>Ana Sayfa</Link>
                     </li>
                     
-                    <li className="mobile-dropdown">
-                        <button 
-                            className="mobile-dropdown-toggle"
-                            onClick={() => setIsMobileAboutOpen(!isMobileAboutOpen)}
-                        >
-                            Hakkımızda
-                            <span className={`arrow ${isMobileAboutOpen ? 'open' : ''}`}>▼</span>
-                        </button>
-                        <ul className={`mobile-submenu ${isMobileAboutOpen ? 'open' : ''}`}>
-                            <li><Link to="/about/vision" onClick={closeMobileMenu}>Vizyonumuz</Link></li>
-                            <li><Link to="/about/mission" onClick={closeMobileMenu}>Misyonumuz</Link></li>
-                        </ul>
+                    <li>
+                        <Link to="/about" onClick={closeMobileMenu}>Hakkımızda</Link>
+                    </li>
+                    <li>
+                        <Link to="/about/vision" onClick={closeMobileMenu} className="mobile-subitem">Vizyonumuz</Link>
+                    </li>
+                    <li>
+                        <Link to="/about/mission" onClick={closeMobileMenu} className="mobile-subitem">Misyonumuz</Link>
                     </li>
 
                     <li>
