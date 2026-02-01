@@ -1,5 +1,3 @@
-# Contents of `README.md`
-
 # Besa Mühendislik
 
 Welcome to the Besa Mühendislik corporate website! This project is designed to showcase our brand, which focuses on advertising and promoting pool, irrigation, and landscape products.
