@@ -29,7 +29,9 @@ const Contact = () => {
             const templateID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
             const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
 
-            console.log('EmailJS Config:', { serviceID, templateID, publicKey: publicKey ? 'Set' : 'Not set' });
+            if (process.env.NODE_ENV === 'development') {
+                console.log('EmailJS Config:', { serviceID, templateID, publicKey: publicKey ? 'Set' : 'Not set' });
+            }
 
             if (!publicKey || !serviceID || !templateID) {
                 throw new Error('EmailJS configuration missing');
@@ -44,24 +46,30 @@ const Contact = () => {
                 to_email: 'cihansercaliskan@outlook.com'
             };
 
-            console.log('Sending email with params:', templateParams);
+            if (process.env.NODE_ENV === 'development') {
+                console.log('Sending email with params:', templateParams);
+            }
 
             // Send email using EmailJS
             const result = await emailjs.send(serviceID, templateID, templateParams);
             
-            console.log('Email sent successfully:', result);
+            if (process.env.NODE_ENV === 'development') {
+                console.log('Email sent successfully:', result);
+            }
             
             setSent(true);
             setForm({ name: '', email: '', phone: '', message: '' });
             setTimeout(() => setSent(false), 4000);
             
         } catch (error) {
-            console.error('Email sending failed:', error);
-            console.error('Error details:', {
-                message: error.message,
-                status: error.status,
-                text: error.text
-            });
+            if (process.env.NODE_ENV === 'development') {
+                console.error('Email sending failed:', error);
+                console.error('Error details:', {
+                    message: error.message,
+                    status: error.status,
+                    text: error.text
+                });
+            }
             
             let errorMessage = 'Email gönderilemedi. ';
             if (error.status === 400) {
